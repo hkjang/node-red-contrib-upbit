@@ -1,0 +1,40 @@
+{
+  "name": "node-red-contrib-upbit",
+  "version": "1.0.0",
+  "description": "Node-RED node for upbit",
+  "main": "node.js",
+  "scripts": {
+    "test": "mocha \"test/**/*_spec.js\" --timeout 3000"
+  },
+  "node-red": {
+    "nodes": {
+      "upbit": "node.js"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/hkjang/node-red-contrib-upbit/issues"
+  },
+  "homepage": "https://github.com/hkjang/node-red-contrib-upbit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkjang/node-red-contrib-upbit.git"
+  },
+  "keywords": [
+    "node-red-contrib-contribgen",
+    "node-red",
+    "upbit",
+    "upbit api",
+    "업비트",
+    "암호화폐",
+    "upbit private api",
+    "upbit public api"
+  ],
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "querystring": "^0.2.1",
+    "request": "^2.88.2",
+    "uuid": "^8.3.2"
+  },
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,16 @@
+{
+  "upbit" : {
+    "label" : {
+      "api": "API",
+      "category": "API Category",
+      "market": "market",
+      "currency": "currency"
+    },
+    "desc" : {
+      "api": "chance,coin,krw,generate_coin_address,coin_addresses,coin_address,wallet",
+      "category": "accounts,orders,order,withdraws,withdraw,deposits,deposit,status,api_keys",
+      "market": "ex) KRW-BTC",
+      "currency": "ex) XRP"
+    }
+  }
+}

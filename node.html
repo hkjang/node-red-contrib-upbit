@@ -1,0 +1,113 @@
+<script type="text/html" data-template-name="upbit">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span
+                data-i18n="node-red:common.label.name"></span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]node-red:common.label.name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-creds"> <i class="fa fa-key fa-fw"></i> API key</span></label>
+        <input type="text" id="node-input-creds">
+    </div>
+    <div class="form-row"><label for="node-input-category"><i class="fa"></i> <span
+            data-i18n="upbit.label.category"></span> </label> <input type="text"
+                                                                      id="node-input-category"
+                                                                      data-i18n="[placeholder]upbit.desc.category">
+    </div>
+    <div class="form-row"><label for="node-input-api"><i class="fa"></i> <span
+            data-i18n="upbit.label.api"></span></label> <input type="text"
+                                                                       id="node-input-api"
+                                                                       data-i18n="[placeholder]upbit.desc.api">
+    </div>
+    <div class="form-row"><label for="node-input-market"><i class="fa"></i> <span
+            data-i18n="upbit.label.market"></span></label> <input type="text"
+                                                                                  id="node-input-market"
+                                                                                  data-i18n="[placeholder]upbit.desc.market">
+    </div>
+    <div class="form-row"><label for="node-input-currency"><i class="fa"></i> <span
+            data-i18n="upbit.label.currency"></span></label> <input type="text"
+                                                                                    id="node-input-currency"
+                                                                                    data-i18n="[placeholder]upbit.desc.currency">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="upbit">
+    <p>Summary of the node.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object</span></dt>
+        <dd>Explanation of payload.</dd>
+        <dt class="optional">topic <span class="property-type">string</span></dt>
+        <dd>Explanation of topic.</dd>
+    </dl>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object</span></dt>
+        <dd>Explanation of payload.</dd>
+        <dt class="optional">topic<span class="property-type">string</span></dt>
+        <dd>Explanation of topic.</dd>
+    </dl>
+    <h3>Details</h3>
+    <p>Explanation of the details.</p>
+    <p><b>Note</b>: Note of the node.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('upbit', {
+        color: '#ffffff',
+        category: 'function',
+        defaults: {
+            name: {value: ''},
+            category: {value: "", required: false},
+            api: {value: "", required: false},
+            market: {value: "", required: false},
+            currency: {value: "", required: false},
+            creds: {
+                value: "",
+                type: "upbitApiKey"
+            },
+        },
+        inputs: 1,
+        outputs: 1,
+        label: function () {
+            return this.name || 'upbit';
+        },
+        icon: 'icon.png',
+        align: 'left'
+    });
+</script>
+
+
+<script type="text/x-red" data-template-name="upbitApiKey">
+    <div class="form-row">
+        <label for="node-input-name"> <i class="fa fa-tag fa-fw"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+      <label for="node-config-input-accessKey"> API Key</label>
+      <input type="text" id="node-config-input-accessKey" placeholder="API Key">
+    </div>
+    <div class="form-row">
+      <label for="node-config-input-secretKey"> Client Secret</label>
+      <input type="text" id="node-config-input-secretKey" placeholder="Client Secret">
+    </div>
+
+
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('upbitApiKey', {
+        category: 'config',
+        defaults: {
+            name: {value: ""}
+        },
+        credentials: {
+            accessKey: {},
+            secretKey: {}
+        },
+        label: function () {
+            return this.name || 'API Key';
+        }
+    });
+</script>
+
